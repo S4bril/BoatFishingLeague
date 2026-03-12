@@ -2,25 +2,130 @@
 <html lang="pl">
   <head>
     <meta charset="UTF-8" />
-    <title>Hello World</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background: #0f172a;
-        color: white;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
-
-      h1 {
-        font-size: 3rem;
-      }
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boat Fishing League | Profesjonalna Liga Wędkarska</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h1>Hello World 👋</h1>
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="#" class="logo">
+          <img
+            src="./media/bfl_logo.pdf-logo.webp"
+            alt="Boat Fishing League Logo"
+          />
+        </a>
+        <nav class="nav-links">
+          <a href="#o-nas">O Lidze</a>
+          <a href="#galeria">Galeria</a>
+          <a href="#zawody">Zawody</a>
+          <a href="#kontakt" class="btn-primary">Dołącz do nas</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Poczuj Zew Natury i Rywalizacji</h1>
+        <p>
+          Najbardziej prestiżowa liga wędkarska z łodzi. Dołącz do najlepszych i
+          zmierz się na najpiękniejszych akwenach.
+        </p>
+        <a href="#o-nas" class="btn-secondary">Dowiedz się więcej</a>
+      </div>
+    </section>
+
+    <section id="o-nas" class="about section-padding container">
+      <div class="about-text">
+        <h2>O Boat Fishing League</h2>
+        <div class="divider"></div>
+        <p>
+          Jesteśmy społecznością pasjonatów wędkarstwa, dla których woda to
+          drugi dom. Nasza liga to nie tylko sportowa rywalizacja na najwyższym
+          poziomie, ale przede wszystkim braterstwo, szacunek do natury i
+          niezapomniane emocje.
+        </p>
+        <p>
+          Dzięki profesjonalnej organizacji i rygorystycznym zasadom fair play,
+          zapewniamy warunki, w których liczą się wyłącznie Twoje umiejętności,
+          taktyka i odrobina wędkarskiego szczęścia.
+        </p>
+      </div>
+      <div class="about-image">
+        <img
+          src="./media/dsc_0003.jpg"
+          alt="Wędkarze na łodzi podczas zawodów"
+        />
+      </div>
+    </section>
+
+    <section id="galeria" class="gallery section-padding bg-light">
+      <div class="container">
+        <div class="section-header">
+          <h2>Klimat Naszych Zawodów</h2>
+          <div class="divider center"></div>
+          <p>
+            Zobacz, w jakich okolicznościach przyrody toczymy nasze zmagania.
+          </p>
+        </div>
+        <div class="gallery-grid">
+          <img
+            src="./media/dsc_3781-edit.jpg"
+            alt="Zatopiony pomost o wschodzie słońca"
+            class="gallery-img"
+          />
+          <img
+            src="./media/dsc_8829-edit.jpg"
+            alt="Odbicie wyspy w tafli jeziora"
+            class="gallery-img"
+          />
+          <img
+            src="./media/dji_0585-hdr-edit.jpg"
+            alt="Widok z drona na wyspę"
+            class="gallery-img"
+          />
+          <img
+            src="./media/dji_0750-hdr-edit.jpg"
+            alt="Archipelag wysp z lotu ptaka"
+            class="gallery-img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <footer id="kontakt" class="footer">
+      <div class="container footer-content">
+        <div class="footer-col">
+          <img
+            src="./media/bfl_logo.pdf-logo.webp"
+            alt="BFL Logo White"
+            class="footer-logo"
+          />
+          <p>
+            Profesjonalna liga wędkarska z łodzi. Emocje, rywalizacja, natura.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h3>Szybkie linki</h3>
+          <ul>
+            <li><a href="#o-nas">Regulamin</a></li>
+            <li><a href="#zawody">Harmonogram 2024</a></li>
+            <li><a href="#galeria">Wyniki</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Kontakt</h3>
+          <p>Email: kontakt@boatfishing-league.com</p>
+          <p>Telefon: +48 123 456 789</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Boat Fishing League. Wszelkie prawa zastrzeżone.</p>
+      </div>
+    </footer>
   </body>
 </html>
