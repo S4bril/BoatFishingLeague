@@ -67,6 +67,20 @@ ul {
   display: block;
 }
 
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Odstęp między obrazkiem a tekstem */
+}
+
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
@@ -114,7 +128,9 @@ ul {
 
 /* --- SEKCJA HERO --- */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
+  padding-top: 80px;
+  margin-top: 0;
   /* Wykorzystanie zdjęcia startujących łodzi z przyciemnieniem dla czytelności tekstu */
   background:
     linear-gradient(rgba(26, 42, 64, 0.7), rgba(26, 42, 64, 0.4)),
@@ -125,7 +141,6 @@ ul {
   justify-content: center;
   text-align: center;
   color: var(--white);
-  margin-top: 80px; /* offset for fixed navbar */
 }
 
 .hero-content {
