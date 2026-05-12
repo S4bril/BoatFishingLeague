@@ -94,6 +94,32 @@
   margin-bottom: 15px;
 }
 
+.action-widget .btn-secondary {
+  /* Zmieniamy kolor tekstu i ramki na granatowy, bo tło jest białe */
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-color: transparent;
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.action-widget .btn-secondary:hover {
+  /* Przy najechaniu przycisk wypełnia się granatem, a tekst staje się biały */
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+/* Dodatkowo upewnijmy się, że przycisk "Zapisz się" też ma pełną szerokość */
+.action-widget .btn-primary-large {
+  display: block;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
 .action-widget {
   background: var(--white);
   border: 2px solid var(--primary-color);
