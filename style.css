@@ -134,13 +134,13 @@ ul {
   /* Wykorzystanie zdjęcia startujących łodzi z przyciemnieniem dla czytelności tekstu */
   background:
     linear-gradient(rgba(26, 42, 64, 0.7), rgba(26, 42, 64, 0.4)),
-    url('481790204_122213454230205176_8717980558008631045_n.jpg') center/cover
-      no-repeat;
+    url('./media/cropped-dsc_0003.webp') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: var(--white);
+  position: relative;
 }
 
 .hero-content {
@@ -149,16 +149,86 @@ ul {
 }
 
 .hero-content h1 {
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: 800;
   margin-bottom: 20px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  line-height: 1.2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .hero-content p {
   font-size: 1.2rem;
   margin-bottom: 40px;
+}
+
+/* --- SEKCJA SOCIALI W HERO --- */
+.hero-socials {
+  position: absolute;
+  bottom: 40px; /* Odstęp od dolnej krawędzi ekranu */
+  left: 50%;
+  transform: translateX(-50%); /* Idealne wyśrodkowanie w poziomie */
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+
+  padding: 10px 15px 10px 30px;
+  background: rgba(26, 42, 64, 0.6); /* Przezroczyste granatowe tło */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Delikatna ramka */
+  border-radius: 50px; /* Zaokrąglenie w kształt "pigułki" */
+  backdrop-filter: blur(5px); /* Efekt szkła (rozmycie tła) */
+  color: var(--white);
+  z-index: 2;
+}
+
+.hero-socials span {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-right: 10px;
+}
+
+/* Style okrągłych przycisków z ikonami */
+.hero-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white);
+  font-size: 1.1rem;
+  transition: var(--transition);
+}
+
+.hero-socials a:hover {
+  background-color: var(
+    --secondary-color
+  ); /* Zmiana koloru na niebieski przy najechaniu */
+  transform: translateY(-3px); /* Lekkie uniesienie */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Dostosowanie na urządzeniach mobilnych */
+@media (max-width: 768px) {
+  .hero-socials {
+    bottom: 20px;
+    padding: 8px 12px 8px 20px;
+  }
+
+  .hero-socials span {
+    font-size: 0.75rem;
+  }
+
+  .hero-socials a {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
 }
 
 /* --- SEKCJA O NAS --- */
