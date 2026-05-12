@@ -27,17 +27,32 @@
         </a>
         <nav class="nav-links">
           <a href="#o-nas">O Lidze</a>
-          <a href="#galeria">Galeria</a>
-          <a href="#zawody">Zawody</a>
-          <a href="#kontakt" class="btn-primary">Dołącz do nas</a>
+          <a href="#terminarz">Zawody</a> <a href="#galeria">Galeria</a>
+          <a href="#kontakt">Kontakt</a>
+          <a href="#terminarz" class="btn-primary"
+            >Zapisz się na najbliższe zawody</a
+          >
         </nav>
       </div>
     </header>
 
     <section class="hero">
       <div class="hero-content">
+        <div class="next-event-badge">
+          <i class="fas fa-calendar-alt"></i>
+          <span
+            >Najbliższe zawody: <strong>Vansjø 30</strong> – 23-24 Maja</span
+          >
+        </div>
+
         <h1>Only the best will win.<br />The water decides.</h1>
-        <a href="#o-nas" class="btn-secondary">Dowiedz się więcej</a>
+
+        <div class="hero-btns">
+          <a href="#najblizsze-zawody" class="btn-primary-large"
+            >Zapisz się na zawody</a
+          >
+          <a href="#terminarz" class="btn-secondary">Wszystkie terminy</a>
+        </div>
       </div>
 
       <div class="hero-socials">
@@ -63,6 +78,37 @@
         >
           <i class="fab fa-youtube"></i>
         </a>
+      </div>
+    </section>
+
+    <section id="terminarz" class="section-padding container">
+      <div class="section-header">
+        <h2>Terminarz 2024</h2>
+        <div class="divider center"></div>
+      </div>
+
+      <div class="events-grid">
+        <div class="event-card highlight" id="najblizsze-zawody">
+          <div class="event-date">23-24 <span>MAJ</span></div>
+          <div class="event-info">
+            <h3>Vansjø 30</h3>
+            <p>
+              <i class="fas fa-map-marker-alt"></i> Jezioro Vansjø, Svinndal
+            </p>
+            <span class="status">Zapisy otwarte</span>
+          </div>
+          <a href="./tournaments/vansjo_30.html" class="btn-event">Szczegóły</a>
+        </div>
+
+        <div class="event-card">
+          <div class="event-date">12 <span>LIP</span></div>
+          <div class="event-info">
+            <h3>Mazurska Batalia</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Jezioro Śniardwy</p>
+            <span class="status">Wkrótce</span>
+          </div>
+          <a href="#" class="btn-event disabled">Wkrótce</a>
+        </div>
       </div>
     </section>
 

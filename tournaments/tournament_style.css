@@ -1,0 +1,115 @@
+/* --- STYLE PODSTRONY ZAWODÓW (Vansjø 30) --- */
+
+.event-hero {
+  min-height: 50vh;
+  padding-top: 100px;
+  background:
+    linear-gradient(rgba(26, 42, 64, 0.8), rgba(26, 42, 64, 0.6)),
+    url('../media/dji_0585-hdr-edit.webp') center/cover no-repeat;
+}
+
+.event-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.event-meta {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.event-meta span {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 15px;
+  border-radius: 5px;
+  backdrop-filter: blur(5px);
+}
+
+.event-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+.content-box {
+  background: var(--white);
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+}
+
+.feature-list li {
+  margin-bottom: 15px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+}
+
+.feature-list i {
+  color: var(--secondary-color);
+  font-size: 1.2rem;
+  margin-top: 4px;
+}
+
+.alert-box {
+  background-color: #fff3cd;
+  border-left: 5px solid #ffc107;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  color: #856404;
+  line-height: 1.8;
+}
+
+.sidebar-widget {
+  background: var(--primary-color);
+  color: var(--white);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+}
+
+.sidebar-widget h3 {
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.day-schedule li span {
+  font-weight: 800;
+  color: var(--secondary-color);
+  min-width: 45px;
+}
+
+.full-width {
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.action-widget {
+  background: var(--white);
+  border: 2px solid var(--primary-color);
+  color: var(--text-color);
+}
+
+.action-widget h3 {
+  color: var(--primary-color);
+}
+
+@media (max-width: 900px) {
+  .event-layout {
+    grid-template-columns: 1fr;
+  }
+  .event-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
