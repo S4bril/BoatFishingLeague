@@ -45,17 +45,28 @@
   margin-bottom: 30px;
 }
 
+.content-box h2 {
+  margin-bottom: 10px;
+}
+
+.content-box h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
 .feature-list li {
   margin-bottom: 15px;
-  display: flex;
-  gap: 15px;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+  align-items: start;
 }
 
 .feature-list i {
   color: var(--secondary-color);
   font-size: 1.2rem;
-  margin-top: 4px;
+  margin-top: 2px;
+  text-align: center;
 }
 
 .alert-box {
@@ -81,7 +92,29 @@
   margin-bottom: 20px;
 }
 
-.day-schedule li span {
+.day-schedule {
+  margin-bottom: 25px;
+}
+
+.day-schedule:last-child {
+  margin-bottom: 0;
+}
+
+.day-schedule h4 {
+  color: var(--white);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Lekka linia oddzielająca dni */
+  padding-bottom: 8px;
+}
+
+.day-schedule li {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.day-schedule span {
   font-weight: 800;
   color: var(--secondary-color);
   min-width: 45px;
@@ -133,9 +166,17 @@
 @media (max-width: 900px) {
   .event-layout {
     grid-template-columns: 1fr;
+    gap: 25px;
   }
   .event-meta {
     flex-direction: column;
     gap: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-box,
+  .sidebar-widget {
+    padding: 25px; /* Mniejszy padding na telefonach daje więcej miejsca na tekst */
   }
 }
