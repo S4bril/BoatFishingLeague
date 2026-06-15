@@ -469,6 +469,65 @@ ul {
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
+/* --- SEKCJA SPONSORZY --- */
+.sponsors-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  align-items: center;
+}
+
+.sponsor-slot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 15px;
+  background: var(--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  min-height: 100px;
+  transition: var(--transition);
+}
+
+.sponsor-slot:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
+}
+
+.sponsor-slot img {
+  max-width: 100%;
+  max-height: 70px;
+  object-fit: contain;
+  transition: var(--transition);
+}
+
+.sponsor-slot:hover img {
+  transform: scale(1.05);
+}
+
+.sponsor-placeholder {
+  border: 2px dashed #d0d8e4;
+  background: transparent;
+  box-shadow: none;
+}
+
+.sponsor-placeholder:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+@media (max-width: 768px) {
+  .sponsors-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+  }
+
+  .sponsor-slot {
+    min-height: 80px;
+    padding: 15px 10px;
+  }
+}
+
 /* --- STOPKA --- */
 .footer {
   background-color: var(--primary-color);
