@@ -152,7 +152,7 @@ ul {
   /* Wykorzystanie zdjęcia startujących łodzi z przyciemnieniem dla czytelności tekstu */
   background:
     linear-gradient(rgba(26, 42, 64, 0.7), rgba(26, 42, 64, 0.4)),
-    url('./media/cropped-dsc_0003.webp') center/cover no-repeat;
+    url('./media/home_page_background.webp') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
