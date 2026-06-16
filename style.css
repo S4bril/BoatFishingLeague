@@ -114,6 +114,42 @@ ul {
   color: var(--secondary-color);
 }
 
+/* --- HAMBURGER (MOBILE) --- */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  z-index: 1001;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 3px;
+  transition: var(--transition);
+  transform-origin: center;
+}
+
+.nav-toggle.open span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle.open span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+.nav-toggle.open span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 /* --- PRZYCISKI --- */
 .btn-primary {
   background-color: var(--primary-color);
@@ -580,19 +616,133 @@ ul {
 
 /* --- RESPONSYWNOŚĆ (DLA TELEFONÓW) --- */
 @media (max-width: 768px) {
+  /* Nawigacja — hamburger */
+  .nav-toggle {
+    display: flex;
+  }
+
   .nav-links {
-    display: none; /* Ukrywamy linki na komórce - w pełnej wersji należałoby dodać menu "hamburger" */
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: var(--white);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+    display: none;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a:not(.btn-primary) {
+    padding: 15px 20px;
+    border-bottom: 1px solid var(--bg-light);
+  }
+
+  .nav-links .btn-primary {
+    margin: 15px 20px;
+    text-align: center;
+  }
+
+  /* Odstępy sekcji */
+  .section-padding {
+    padding: 50px 0;
+  }
+
+  /* Typografia */
+  .section-header h2,
+  .about-text h2 {
+    font-size: 1.9rem;
   }
 
   .hero-content h1 {
     font-size: 2.2rem;
   }
 
-  .about {
+  /* Przyciski hero */
+  .hero-btns {
     flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 
+  /* Sekcja O nas */
+  .about {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  /* Karty zawodów */
+  .event-card {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .event-info {
+    padding: 0 10px;
+  }
+
+  /* Galeria */
   .gallery-grid {
     grid-template-columns: 1fr;
+  }
+
+  .gallery-img {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* Stopka */
+  .footer-col {
+    min-width: unset;
+    flex: unset;
+    width: 100%;
+  }
+
+  .footer-content {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+  }
+
+  .next-event-badge {
+    font-size: 0.8rem;
+    padding: 6px 14px;
+  }
+
+  .nav-container {
+    height: 65px;
+  }
+
+  .logo img {
+    height: 45px;
+  }
+
+  .logo-text {
+    font-size: 1rem;
+  }
+
+  .nav-links {
+    top: 65px;
+  }
+
+  .btn-primary-large,
+  .btn-secondary {
+    padding: 12px 24px;
+    font-size: 1rem;
+  }
+
+  .hero {
+    padding-top: 65px;
   }
 }

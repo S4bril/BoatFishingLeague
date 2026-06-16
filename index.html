@@ -28,6 +28,11 @@
           <a href="#sponsorzy">Sponsorzy</a>
           <a href="#kontakt">Kontakt</a>
         </nav>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
     </header>
 
@@ -166,9 +171,6 @@
         <div class="section-header">
           <h2>Klimat Naszych Zawodów</h2>
           <div class="divider center"></div>
-          <p>
-            Zobacz, w jakich okolicznościach przyrody toczymy nasze zmagania.
-          </p>
         </div>
         <div class="gallery-grid">
           <!-- GALLERY:START -->
@@ -212,7 +214,6 @@
         <div class="section-header">
           <h2>Sponsorzy</h2>
           <div class="divider center"></div>
-          <p>Dziękujemy wszystkim sponsorom za wsparcie Boat Fishing League.</p>
         </div>
 
         <!-- Loga generowane automatycznie przez scripts/generate-sponsors.js — wrzuć plik do media/sponsors/ i zrób push. -->
@@ -318,7 +319,6 @@
             alt="BFL Logo White"
             class="footer-logo"
           />
-          <p>Liga wędkarska na wodach Skandynawii.</p>
         </div>
         <div class="footer-col">
           <h3>Kontakt</h3>
@@ -330,5 +330,21 @@
         <p>&copy; 2024 Boat Fishing League. Wszelkie prawa zastrzeżone.</p>
       </div>
     </footer>
+    <script>
+      const toggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      toggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        toggle.classList.toggle('open', isOpen);
+        toggle.setAttribute('aria-expanded', isOpen);
+      });
+      navLinks.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          toggle.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    </script>
   </body>
 </html>

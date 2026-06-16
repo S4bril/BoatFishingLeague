@@ -175,6 +175,31 @@
 @media (max-width: 768px) {
   .content-box,
   .sidebar-widget {
-    padding: 25px; /* Mniejszy padding na telefonach daje więcej miejsca na tekst */
+    padding: 20px;
+  }
+
+  .event-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .content-box h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-hero {
+    min-height: 40vh;
+    padding-top: 80px;
+  }
+
+  .event-meta span {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+
+  .content-box,
+  .sidebar-widget {
+    padding: 16px;
   }
 }
