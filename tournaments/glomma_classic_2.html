@@ -1,13 +1,11 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en" data-i18n-title="glomma.page.title">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Glomma Classic – Etap 2 | Boat Fishing League</title>
+    <title>Glomma Classic – Stage 2 | Boat Fishing League</title>
     <link rel="icon" type="image/webp" href="../media/logo.webp" />
-    <!-- Main styles from root -->
     <link rel="stylesheet" href="../style.css" />
-    <!-- Specific tournament styles -->
     <link rel="stylesheet" href="tournament_style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
@@ -36,11 +34,16 @@
           <span class="logo-text">Boat Fishing League</span>
         </a>
         <nav class="nav-links">
-          <a href="../index.html#o-nas">O Lidze</a>
-          <a href="../index.html#galeria">Galeria</a>
-          <a href="../index.html#sponsorzy">Sponsorzy</a>
-          <a href="../index.html#kontakt">Kontakt</a>
+          <a href="../index.html#o-nas" data-i18n="nav.about">About the League</a>
+          <a href="../index.html#galeria" data-i18n="nav.gallery">Gallery</a>
+          <a href="../index.html#sponsorzy" data-i18n="nav.sponsors">Sponsors</a>
+          <a href="../index.html#kontakt" data-i18n="nav.contact">Contact</a>
         </nav>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="en" aria-pressed="true" title="English">EN</button>
+          <button class="lang-btn" data-lang="pl" aria-pressed="false" title="Polski">PL</button>
+          <button class="lang-btn" data-lang="no" aria-pressed="false" title="Norsk">NO</button>
+        </div>
         <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
           <span></span>
           <span></span>
@@ -52,132 +55,90 @@
     <section class="hero event-hero">
       <div class="hero-content">
         <h1>Glomma Classic</h1>
-        <p class="event-subtitle">Etap 2 – "The river never forgives."</p>
+        <p class="event-subtitle" data-i18n="glomma.subtitle">Stage 2 – "The river never forgives."</p>
         <div class="event-meta">
-          <span><i class="fas fa-calendar-check"></i> 20 - 21 Czerwca</span>
-          <span><i class="fas fa-map-marker-alt"></i> Rzeka Glomma, Askim</span>
+          <span><i class="fas fa-calendar-check"></i> <span data-i18n="glomma.date">20 - 21 June</span></span>
+          <span><i class="fas fa-map-marker-alt"></i> <span data-i18n="glomma.location">Glomma River, Askim</span></span>
         </div>
       </div>
     </section>
 
     <section class="section-padding container">
       <div class="event-layout">
-        <!-- <div class="event-main-content">
-          <div class="content-box">
-            <h2>O łowisku</h2>
-            <div class="divider"></div>
-            <p>
-              <strong>Glomma</strong> to najdłuższa rzeka Norwegii, przepływająca
-              przez region Østfold. Zawody rozgrywane są na odcinku od zapory
-              <strong>Vamma</strong> koło Askim, w dół rzeki aż do
-              <strong>Sarpsfossen</strong>, a także na akwenach
-              <strong>Minge</strong> i <strong>Vestvannet</strong>. To wymagające
-              i zróżnicowane łowisko, gdzie dynamiczny nurt rzeki łączy się ze
-              spokojniejszymi wodami stojącymi.
-            </p>
-            <h3>Charakterystyka:</h3>
-            <ul class="feature-list">
-              <li>
-                <i class="fas fa-water"></i>
-                <div>
-                  <strong>Zróżnicowany teren:</strong> odcinek rzeczny z wyraźnym
-                  nurtem, cofki, zatoki oraz spokojniejsze akweny Minge i Vestvannet.
-                </div>
-              </li>
-              <li>
-                <i class="fas fa-ruler-vertical"></i>
-                <div>
-                  <strong>Struktura dna:</strong> głębsze partie koryta rzeki,
-                  spady, kamieniste bystrza oraz muliste zatoki.
-                </div>
-              </li>
-              <li>
-                <i class="fas fa-fish"></i>
-                <div>
-                  <strong>Gatunki docelowe:</strong> szczupak i okoń – klasyczne
-                  gatunki łowiska rzeki Glomma.
-                </div>
-              </li>
-            </ul>
-          </div> -->
 
+        <div class="event-main-content">
           <div class="content-box">
-            <h2>Miejsce zawodów i Baza</h2>
+            <h2 data-i18n="glomma.venue.title">Venue and Base</h2>
             <div class="divider"></div>
-            <p>
-              Zawody odbywają się na rzece Glomma od zapory Vamma (Askim) w dół
-              do Sarpsfossen, z włączeniem akwenów Minge i Vestvannet.
+            <p data-i18n="glomma.venue.p">
+              The competition takes place on the Glomma river from the Vamma dam (Askim) downstream to Sarpsfossen, including the Minge and Vestvannet waters.
             </p>
             <p>
-              <i class="fas fa-map-pin"></i> <strong>Miejsce startu:</strong>
+              <i class="fas fa-map-pin"></i>
+              <strong data-i18n="glomma.venue.start_label">Start point:</strong>
               Glennetangen
             </p>
-            <h3>Akweny zawodów:</h3>
+            <h3 data-i18n="glomma.waters.title">Competition waters:</h3>
             <ul class="feature-list">
-              <li><i class="fas fa-stream"></i> Glomma – od zapory Vamma do Sarpsfossen</li>
-              <li><i class="fas fa-water"></i> Akwen Minge</li>
-              <li><i class="fas fa-water"></i> Vestvannet</li>
+              <li><i class="fas fa-stream"></i> <span data-i18n="glomma.waters.1">Glomma – from Vamma dam to Sarpsfossen</span></li>
+              <li><i class="fas fa-water"></i> <span data-i18n="glomma.waters.2">Minge waters</span></li>
+              <li><i class="fas fa-water"></i> <span data-i18n="glomma.waters.3">Vestvannet</span></li>
             </ul>
           </div>
 
           <div class="content-box">
-            <h2>Rejestracja i Płatność</h2>
+            <h2 data-i18n="glomma.reg.title">Registration and Payment</h2>
             <div class="divider"></div>
-            <p>
-              Wpisowe wynosi <strong>1600 kr / drużyna</strong>. Zgłoszenia
-              przyjmowane są do <strong>17.06.2026, godz. 12:00</strong>.
+            <p data-i18n-html="glomma.reg.p">
+              Entry fee is <strong>1600 kr / team</strong>. Registrations are accepted until <strong>17.06.2026, 12:00</strong>.
             </p>
-            <h3>Sposoby płatności:</h3>
+            <h3 data-i18n="glomma.pay.title">Payment methods:</h3>
             <ul class="feature-list">
               <li>
                 <i class="fas fa-mobile-alt"></i>
-                <div>
-                  <strong>Vipps:</strong> numer #43021, tytuł: „Glomma Classic"
-                </div>
+                <div data-i18n-html="glomma.pay.vipps"><strong>Vipps:</strong> number #43021, title: "Glomma Classic"</div>
               </li>
               <li>
                 <i class="fas fa-university"></i>
-                <div>
-                  <strong>Przelew krajowy:</strong> konto nr 2480 54 23850,
-                  tytuł: „Glomma Classic"
-                </div>
+                <div data-i18n-html="glomma.pay.transfer"><strong>Domestic transfer:</strong> account nr 2480 54 23850, title: "Glomma Classic"</div>
               </li>
             </ul>
-            <div class="alert-box">
-              <strong>Przelewy międzynarodowe:</strong><br />
+            <div class="alert-box" data-i18n-html="glomma.alert.international">
+              <strong>International transfers:</strong><br />
               IBAN: NO1824805423850<br />
               SWIFT/BIC: SPRONO22<br />
-              Numer konta: 2480 54 23850
+              Account number: 2480 54 23850
             </div>
           </div>
         </div>
 
         <div class="event-sidebar">
           <div class="sidebar-widget schedule-widget">
-            <h3>Harmonogram</h3>
+            <h3 data-i18n="glomma.schedule.title">Schedule</h3>
             <div class="day-schedule">
-              <h4>Dzień 1 (20 Czerwca)</h4>
+              <h4 data-i18n="glomma.schedule.day1">Day 1 (June 20)</h4>
               <ul>
-                <li><span>07:30</span> Start</li>
-                <li><span>20:00</span> Koniec dnia</li>
+                <li><span>07:30</span> <span data-i18n="glomma.schedule.start">Start</span></li>
+                <li><span>20:00</span> <span data-i18n="glomma.schedule.end_day">End of day</span></li>
               </ul>
             </div>
             <div class="day-schedule">
-              <h4>Dzień 2 (21 Czerwca)</h4>
+              <h4 data-i18n="glomma.schedule.day2">Day 2 (June 21)</h4>
               <ul>
-                <li><span>07:00</span> Start</li>
-                <li><span>14:00</span> Koniec</li>
+                <li><span>07:00</span> <span data-i18n="glomma.schedule.start">Start</span></li>
+                <li><span>14:00</span> <span data-i18n="glomma.schedule.end">End</span></li>
               </ul>
             </div>
           </div>
 
           <div class="sidebar-widget action-widget" id="zapisy">
-            <h3>Zapisz się</h3>
+            <h3 data-i18n="glomma.register.title">Register</h3>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSder_FOKNThQyr4QIKnO6s2ft3TiUMRbDiPs8u7T-u5jsltkA/viewform?usp=preview"
               target="_blank"
               class="btn-primary-large full-width"
-              >Formularz zgłoszeniowy</a
+              data-i18n="glomma.register.btn"
+              >Registration Form</a
             >
           </div>
         </div>
@@ -186,9 +147,10 @@
 
     <footer class="footer">
       <div class="container footer-bottom" style="border-top: none">
-        <p>&copy; 2024 Boat Fishing League. Wszelkie prawa zastrzeżone.</p>
+        <p data-i18n="footer.rights">&copy; 2024 Boat Fishing League. All rights reserved.</p>
       </div>
     </footer>
+    <script src="../i18n.js"></script>
     <script>
       const toggle = document.querySelector('.nav-toggle');
       const navLinks = document.querySelector('.nav-links');

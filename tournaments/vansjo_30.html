@@ -1,13 +1,11 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en" data-i18n-title="vansjo.page.title">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vansjø 30 | Boat Fishing League</title>
     <link rel="icon" type="image/webp" href="../media/logo.webp" />
-    <!-- Main styles from root -->
     <link rel="stylesheet" href="../style.css" />
-    <!-- Specific tournament styles -->
     <link rel="stylesheet" href="tournament_style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
@@ -34,11 +32,16 @@
           <span class="logo-text">Boat Fishing League</span>
         </a>
         <nav class="nav-links">
-          <a href="../index.html#o-nas">O Lidze</a>
-          <a href="../index.html#terminarz">Zawody</a>
-          <a href="../index.html#galeria">Galeria</a>
-          <a href="#zapisy" class="btn-primary">Zapisz się</a>
+          <a href="../index.html#o-nas" data-i18n="nav.about">About the League</a>
+          <a href="../index.html#terminarz" data-i18n="nav.tournaments">Tournaments</a>
+          <a href="../index.html#galeria" data-i18n="nav.gallery">Gallery</a>
+          <a href="#zapisy" class="btn-primary" data-i18n="nav.register">Register</a>
         </nav>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="en" aria-pressed="true" title="English">EN</button>
+          <button class="lang-btn" data-lang="pl" aria-pressed="false" title="Polski">PL</button>
+          <button class="lang-btn" data-lang="no" aria-pressed="false" title="Norsk">NO</button>
+        </div>
         <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
           <span></span>
           <span></span>
@@ -52,8 +55,8 @@
         <h1>Vansjø 30</h1>
         <p class="event-subtitle">"Catch the biggest. Win it all."</p>
         <div class="event-meta">
-          <span><i class="fas fa-calendar-check"></i> 23 - 24 Maja</span>
-          <span><i class="fas fa-map-marker-alt"></i> Jezioro Vansjø</span>
+          <span><i class="fas fa-calendar-check"></i> <span data-i18n="vansjo.date">23 - 24 May</span></span>
+          <span><i class="fas fa-map-marker-alt"></i> <span data-i18n="vansjo.location">Lake Vansjø</span></span>
         </div>
       </div>
     </section>
@@ -62,99 +65,94 @@
       <div class="event-layout">
         <div class="event-main-content">
           <div class="content-box">
-            <h2>O łowisku</h2>
+            <h2 data-i18n="vansjo.fishing.title">About the Venue</h2>
             <div class="divider"></div>
-            <p>
-              Jezioro <strong>Vansjø</strong> to rozległy, złożony system wodny
-              w regionie Østfold, w rejonie Moss i Fredrikstad, który stanowi
-              wymagające łowisko o dużym potencjale sportowym. Akwen dzieli się
-              na kilka basenów o różnej charakterystyce – od płytkich, silnie
-              zarośniętych zatok po głębsze partie z wyraźną strukturą dna.
+            <p data-i18n-html="vansjo.fishing.p">
+              Lake <strong>Vansjø</strong> is an extensive, complex water system in the Østfold region, near Moss and Fredrikstad, offering a challenging venue with great sporting potential. The lake is divided into several basins with different characteristics — from shallow, heavily vegetated bays to deeper sections with distinct bottom structure.
             </p>
-            <h3>Charakterystyka:</h3>
+            <h3 data-i18n="vansjo.fishing.char">Characteristics:</h3>
             <ul class="feature-list">
               <li>
                 <i class="fas fa-water"></i>
                 <div>
-                  <strong>Zróżnicowana struktura:</strong> trzcinowiska,
-                  podwodne łąki, spady, twarde blaty oraz kanały między wyspami.
+                  <strong data-i18n="vansjo.fishing.f1.title">Varied structure:</strong>
+                  <span data-i18n="vansjo.fishing.f1.desc">reed beds, underwater meadows, drop-offs, hard flats and channels between islands.</span>
                 </div>
               </li>
               <li>
                 <i class="fas fa-ruler-vertical"></i>
                 <div>
-                  <strong>Głębokość:</strong> kluczowe są krawędzie roślinności
-                  i przejścia twarde/miękkie dno.
+                  <strong data-i18n="vansjo.fishing.f2.title">Depth:</strong>
+                  <span data-i18n="vansjo.fishing.f2.desc">key areas are vegetation edges and hard/soft bottom transitions.</span>
                 </div>
               </li>
               <li>
                 <i class="fas fa-wind"></i>
                 <div>
-                  <strong>Warunki pogodowe:</strong> silna ekspozycja na wiatr.
+                  <strong data-i18n="vansjo.fishing.f3.title">Weather conditions:</strong>
+                  <span data-i18n="vansjo.fishing.f3.desc">strong exposure to wind.</span>
                 </div>
               </li>
             </ul>
           </div>
 
           <div class="content-box">
-            <h2>Miejsce zawodów i Baza</h2>
+            <h2 data-i18n="vansjo.venue.title">Venue and Base</h2>
             <div class="divider"></div>
-            <p>
-              Zawody odbywają się na całym jeziorze Vansjø
-              <strong>z wyjątkiem Vestre Vansjø naturreservat</strong>.
+            <p data-i18n-html="vansjo.venue.p">
+              The competition takes place on the entire lake Vansjø <strong>except for Vestre Vansjø naturreservat</strong>.
             </p>
             <p>
-              <i class="fas fa-map-pin"></i> <strong>Adres:</strong> Rosveien
-              662, 1593 Svinndal
+              <i class="fas fa-map-pin"></i>
+              <strong data-i18n="vansjo.venue.address">Address:</strong>
+              Rosveien 662, 1593 Svinndal
             </p>
-            <h3>Udogodnienia na miejscu:</h3>
+            <h3 data-i18n="vansjo.amenities.title">On-site amenities:</h3>
             <ul class="feature-list">
-              <li><i class="fas fa-restroom"></i> Toalety</li>
-              <li><i class="fas fa-plug"></i> Prąd</li>
-              <li><i class="fas fa-campground"></i> Pole namiotowe</li>
+              <li><i class="fas fa-restroom"></i> <span data-i18n="vansjo.amenities.toilets">Toilets</span></li>
+              <li><i class="fas fa-plug"></i> <span data-i18n="vansjo.amenities.power">Electricity</span></li>
+              <li><i class="fas fa-campground"></i> <span data-i18n="vansjo.amenities.camping">Camping area</span></li>
             </ul>
           </div>
 
           <div class="content-box">
-            <h2>Zasady Kontroli</h2>
+            <h2 data-i18n="vansjo.control.title">Control Rules</h2>
             <div class="divider"></div>
-            <p>
-              SMS na nr tel <strong>998 703 13</strong>:
-              <em>"Przerwa oraz nazwa teamu i zawodników"</em>.
+            <p data-i18n-html="vansjo.control.p">
+              SMS to tel <strong>998 703 13</strong>: <em>"Break and team name and anglers"</em>.
             </p>
-            <div class="alert-box">
-              <strong>WAŻNE!</strong><br />
-              • Zawody trwają również w nocy!<br />
-              • Prosimy o zachowanie szczególnej ostrożności na drodze
-              dojazdowej.
+            <div class="alert-box" data-i18n-html="vansjo.alert">
+              <strong>IMPORTANT!</strong><br />
+              • Competition continues overnight!<br />
+              • Please take special care on the access road.
             </div>
           </div>
         </div>
 
         <div class="event-sidebar">
           <div class="sidebar-widget schedule-widget">
-            <h3>Harmonogram</h3>
+            <h3 data-i18n="vansjo.schedule.title">Schedule</h3>
             <div class="day-schedule">
-              <h4>Dzień 1 (23 Maja)</h4>
+              <h4 data-i18n="vansjo.schedule.day1">Day 1 (May 23)</h4>
               <ul>
-                <li><span>05:30</span> Kontrola łodzi</li>
-                <li><span>06:45</span> Odprawa</li>
-                <li><span>07:30</span> Start</li>
+                <li><span>05:30</span> <span data-i18n="vansjo.schedule.boat_check">Boat check</span></li>
+                <li><span>06:45</span> <span data-i18n="vansjo.schedule.briefing">Briefing</span></li>
+                <li><span>07:30</span> <span data-i18n="vansjo.schedule.start">Start</span></li>
               </ul>
             </div>
             <div class="day-schedule">
-              <h4>Dzień 2 (24 Maja)</h4>
+              <h4 data-i18n="vansjo.schedule.day2">Day 2 (May 24)</h4>
               <ul>
-                <li><span>14:00</span> Koniec</li>
-                <li><span>15:00</span> Wyniki</li>
+                <li><span>14:00</span> <span data-i18n="vansjo.schedule.end">End</span></li>
+                <li><span>15:00</span> <span data-i18n="vansjo.schedule.results">Results</span></li>
               </ul>
             </div>
           </div>
 
           <div class="sidebar-widget action-widget" id="zapisy">
-            <h3>Dokumenty</h3>
-            <a href="#" class="btn-secondary full-width">Regulamin</a>
-            <a href="#" class="btn-primary-large full-width">Zapisz się</a>
+            <h3 data-i18n="vansjo.docs.title">Documents</h3>
+            <a href="#" class="btn-secondary full-width" data-i18n="vansjo.docs.rules">Rules</a>
+            <a href="#" class="btn-primary-large full-width" data-i18n="vansjo.docs.register">Register</a>
           </div>
         </div>
       </div>
@@ -162,9 +160,10 @@
 
     <footer class="footer">
       <div class="container footer-bottom" style="border-top: none">
-        <p>&copy; 2024 Boat Fishing League. Wszelkie prawa zastrzeżone.</p>
+        <p data-i18n="footer.rights">&copy; 2024 Boat Fishing League. All rights reserved.</p>
       </div>
     </footer>
+    <script src="../i18n.js"></script>
     <script>
       const toggle = document.querySelector('.nav-toggle');
       const navLinks = document.querySelector('.nav-links');

@@ -614,6 +614,39 @@ ul {
   color: #aaaaaa;
 }
 
+/* --- PRZEŁĄCZNIK JĘZYKA --- */
+.lang-switcher {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.lang-btn {
+  background: none;
+  border: 1.5px solid transparent;
+  border-radius: 4px;
+  padding: 4px 7px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  color: var(--text-light);
+  transition: var(--transition);
+  line-height: 1;
+}
+
+.lang-btn:hover {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.lang-btn.active {
+  background: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+}
+
 /* --- RESPONSYWNOŚĆ (DLA TELEFONÓW) --- */
 @media (max-width: 768px) {
   /* Nawigacja — hamburger */
@@ -744,5 +777,16 @@ ul {
 
   .hero {
     padding-top: 65px;
+  }
+}
+
+@media (max-width: 380px) {
+  .logo-text {
+    display: none;
+  }
+
+  .lang-btn {
+    padding: 3px 5px;
+    font-size: 0.65rem;
   }
 }
