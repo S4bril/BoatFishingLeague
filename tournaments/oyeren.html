@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" data-i18n-title="oyeren.page.title">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Øyeren | Boat Fishing League</title>
+    <link rel="icon" type="image/webp" href="../media/logo.webp" />
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="tournament_style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <style>
+      .event-hero {
+        background:
+          linear-gradient(rgba(26, 42, 64, 0.8), rgba(26, 42, 64, 0.6)),
+          url('../media/gallery/island-fjord-aerial.webp') center/cover no-repeat;
+      }
+    </style>
+  </head>
+  <body class="bg-light">
+    <header class="navbar">
+      <div class="container nav-container">
+        <a href="../index.html" class="logo">
+          <img src="../media/logo.webp" alt="Boat Fishing League Logo" />
+          <span class="logo-text">Boat Fishing League</span>
+        </a>
+        <nav class="nav-links">
+          <a href="../index.html#o-nas" data-i18n="nav.about">About the League</a>
+          <a href="../index.html#galeria" data-i18n="nav.gallery">Gallery</a>
+          <a href="../index.html#sponsorzy" data-i18n="nav.sponsors">Sponsors</a>
+          <a href="../index.html#kontakt" data-i18n="nav.contact">Contact</a>
+        </nav>
+        <div class="lang-switcher">
+          <button class="lang-btn" data-lang="en" aria-pressed="true" title="English">EN</button>
+          <button class="lang-btn" data-lang="pl" aria-pressed="false" title="Polski">PL</button>
+          <button class="lang-btn" data-lang="no" aria-pressed="false" title="Norsk">NO</button>
+        </div>
+        <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero event-hero">
+      <div class="hero-content">
+        <h1>Øyeren</h1>
+        <p class="event-subtitle" data-i18n="oyeren.subtitle">"Big water, big fish."</p>
+        <div class="event-meta">
+          <span><i class="fas fa-calendar-check"></i> <span data-i18n="oyeren.date">15 – 16 August</span></span>
+          <span><i class="fas fa-map-marker-alt"></i> <span data-i18n="oyeren.location">Lake Øyeren</span></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-padding container">
+      <div class="event-layout">
+        <div class="event-main-content">
+          <div class="content-box" style="text-align: center; padding: 60px 40px;">
+            <i class="fas fa-clock" style="font-size: 3rem; color: var(--secondary-color); margin-bottom: 20px; display: block;"></i>
+            <h2 data-i18n="event.coming_soon.title">More information coming soon</h2>
+            <div class="divider"></div>
+            <p data-i18n="event.coming_soon.p">Details about this event will be published here soon. Follow our social media to stay up to date.</p>
+          </div>
+        </div>
+
+        <div class="event-sidebar">
+          <div class="sidebar-widget">
+            <h3 data-i18n="glomma.season.title">Season 2026</h3>
+            <ul class="season-list">
+              <li class="done">
+                <span class="s-date">21.03–3.05</span>
+                <span data-i18n="glomma.season.online_spring">Online Spring</span>
+                <span class="s-done" data-i18n="glomma.season.done">done</span>
+              </li>
+              <li>
+                <span class="s-date">20–21.06</span>
+                <span>Glomma Classic</span>
+              </li>
+              <li>
+                <span class="s-date">15–16.08</span>
+                <span data-i18n="glomma.season.oyeren">Øyeren</span>
+              </li>
+              <li>
+                <span class="s-date">26–27.09</span>
+                <span data-i18n="glomma.season.glomma_final">Glomma Finał</span>
+              </li>
+              <li>
+                <span class="s-date">3.10–15.11</span>
+                <span data-i18n="glomma.season.online_autumn">Online Autumn</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container footer-bottom" style="border-top: none">
+        <p data-i18n="footer.rights">&copy; 2024 Boat Fishing League. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="../i18n.js"></script>
+    <script>
+      const toggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      toggle.addEventListener('click', () => {
+        const isOpen = navLinks.classList.toggle('open');
+        toggle.classList.toggle('open', isOpen);
+        toggle.setAttribute('aria-expanded', isOpen);
+      });
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('open');
+          toggle.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    </script>
+  </body>
+</html>

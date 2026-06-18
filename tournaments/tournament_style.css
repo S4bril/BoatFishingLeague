@@ -203,3 +203,194 @@
     padding: 16px;
   }
 }
+
+.season-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.season-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  font-size: 0.9rem;
+}
+
+.season-list li:last-child {
+  border-bottom: none;
+}
+
+.season-list .s-date {
+  font-weight: 800;
+  color: var(--secondary-color);
+  min-width: 90px;
+  flex-shrink: 0;
+  font-size: 0.82rem;
+}
+
+.season-list li.done {
+  opacity: 0.5;
+}
+
+.season-list .s-done {
+  font-size: 0.75rem;
+  font-style: italic;
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+/* --- GALERIA TURNIEJOWA --- */
+
+.t-gallery-masonry {
+  columns: 4;
+  column-gap: 10px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.t-gallery-item {
+  break-inside: avoid;
+  display: block;
+  margin: 0 0 10px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.t-gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+.t-gallery-item:hover img {
+  transform: scale(1.04);
+  opacity: 0.82;
+}
+
+.t-gallery-item:focus-visible {
+  outline: 3px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+/* --- LIGHTBOX --- */
+
+dialog.t-lightbox {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+dialog.t-lightbox[open] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+dialog.t-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.93);
+}
+
+.t-lightbox-img {
+  max-width: 90vw;
+  max-height: 88vh;
+  object-fit: contain;
+  display: block;
+  border-radius: 4px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+}
+
+.t-lightbox-close,
+.t-lightbox-prev,
+.t-lightbox-next {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.12);
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  transition: background 0.2s;
+  backdrop-filter: blur(6px);
+  flex-shrink: 0;
+}
+
+.t-lightbox-close:hover,
+.t-lightbox-prev:hover,
+.t-lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.t-lightbox-close {
+  top: 18px;
+  right: 18px;
+}
+
+.t-lightbox-prev {
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.t-lightbox-next {
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.t-lightbox-counter {
+  position: absolute;
+  bottom: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 0.85rem;
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.06em;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+@media (max-width: 1200px) {
+  .t-gallery-masonry { columns: 3; }
+}
+
+@media (max-width: 768px) {
+  .t-gallery-masonry {
+    columns: 2;
+    column-gap: 8px;
+    padding: 0 12px;
+  }
+  .t-gallery-item { margin-bottom: 8px; }
+  .t-lightbox-prev,
+  .t-lightbox-next {
+    width: 40px;
+    height: 40px;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .t-gallery-masonry { columns: 2; }
+}
